@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"time"
 )
 
 type Products struct {
@@ -14,10 +13,6 @@ type Products struct {
 }
 
 func main() {
-	// Print time
-	a := time.Now()
-	fmt.Println(a)
-
 	// Read txt file
 	data := mustRead("data/conversation.txt")
 	fmt.Println("Txt file: ", string(data))
