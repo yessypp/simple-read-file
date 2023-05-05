@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type ProductList struct {
+type Products struct {
 	ID        string
 	Name      string
 	CreatedAt int
@@ -20,12 +20,12 @@ func main() {
 
 	// Read txt file
 	data := mustRead("data/conversation.txt")
-	fmt.Println(string(data))
+	fmt.Println("Txt file: ", string(data))
 
 	// Read JSON file
-	data = mustRead("data/productlist.json")
+	data = mustRead("data/products.json")
 
-	var products []ProductList
+	var products []Products
 	err := json.Unmarshal(data, &products)
 	if err != nil {
 		panic(err)
